@@ -12,7 +12,7 @@ Terra PC (German PC OEM) with Gigabyte Mainboard GA-H110-D2P and an Intel i3 610
 - EFI is cleaned from all unnecessary stuff
 ##
 
-![ScreenShot](/terrapc.jpg?raw=true "ScreenShot")
+![ScreenShot](/terrapc2.jpg?raw=true "ScreenShot")
 
 ### 🖥️ Hardware
 | Component      | Info                                                             |
