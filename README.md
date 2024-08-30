@@ -45,16 +45,32 @@ Terra PC (German PC OEM) with Gigabyte Mainboard GA-H110-D2P and an Intel i3 610
 
 ## ⚙️ Setup
 <details>
-<summary><strong>🔧 BIOS Settings</strong></summary>
+<summary><strong>🔧 BIOS Settings (maybe some of them not needed, but never touch a running system ;)</strong></summary>
   <br>
 
+1. Load `BIOS Defaults` under `Save & Exit`
+2. Under `BIOS` TAB:
+3. `Windows 8/10 Features:               Other OS`
+4. `Storage Boot Device Option control:  UEFI`
+5. `Other PCI devices :                  UEFI`
+6. `Secure Boot / Attempt Secure Boot:   Disabled`
+7. Under `Peripherals` TAB:
+8. `Initial Display Output:              IGFX`
+9. `Intel Platform Trust Technology:     Disabled`
+10. `Trusted Computing/Security Dev.Sup:  Disabled`
+11. `Intel Bios Guard Technology:         Disabled`
+12. Under `USB Configuration`
+13. `Legacy USB Support:              Enabled`
+14. `XHCI Hand-Off:                   Enabled`
+15. `USB Mass Storage Dev. Support:   Enabled`
+16. `Port 60/40 Emulation:            Enabled`
+17. Under `SATA and RST Configuration`
+18. `SATA Mode:                       AHCI` 
 
 </details>
 <details>
 <summary><strong>🔢 Generating SMBIOS</strong></summary>
   <br>
-
-- ### Generating SMBIOS:
 
 Used [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS) from corpnewt, to generate a fake serial number, UUID and MLB.
 
@@ -67,10 +83,9 @@ Used [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS) from corpnewt, to genera
 5. once you get the right serial number you can go and fill the generated data in the config.plist file under `PlatformInfo` section, and you are good to go! 
 </details>
 <details>
-<summary><strong>🫣 iGPU Spoofing </strong></summary>
+<summary><strong>🫣 iGPU Spoofing - Generating Patch:</strong></summary>
   <br>
   
-- ### Generating Patch:
 **This step is done after you finish the installation**
 1. Download [Hackintool](https://github.com/benbaker76/Hackintool) and open it.
 2. Go to `Patch` Category 
@@ -82,9 +97,5 @@ Used [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS) from corpnewt, to genera
 8. Click `Generate Patch`
 9. Now you got the patch, you need to copy the `PciRoot(0x0)/Pci(0x2,0x0)` Key .
 10. Paste it under `DeviceProperties > Add` in your config.plist file.
-11. Enjoy!
-
-
+11. Have fun!
 </details>
-
-## not completed yet...
